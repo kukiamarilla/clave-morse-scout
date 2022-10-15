@@ -1,0 +1,26 @@
+.LetterCard {
+    width: 85px;
+    height: 85px;
+    border-radius: 20px;
+    background-color: #F2F2F2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+.LetterCard.selected {
+    background-color: #019DF5;
+    color: #fff;
+}
+
+.LetterCard.failed {
+    background-color: #E70202;
+    color: #fff;
+}
+
+.LetterCard.spoted {
+    background-color: #15CB32;
+    color: #fff;
+}

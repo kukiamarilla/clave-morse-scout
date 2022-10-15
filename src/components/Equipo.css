@@ -1,0 +1,18 @@
+.Equipo {
+    flex: 1;
+}
+.Equipo h2, .Equipo h4 {
+    margin-bottom: 8px;
+}
+
+.Equipo h4.selected {
+    color: #EEAB00;
+}
+
+.Equipo h4.active {
+    color: #019DF5;
+}
+
+.Equipo h4.won {
+    color: #15CB32;
+}

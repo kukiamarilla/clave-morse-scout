@@ -1,0 +1,31 @@
+.Juego {
+    flex: 4;
+    margin: 0 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.Juego .palabra {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.Juego .morse{
+    margin-top: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.Juego .telegrafo {
+    margin-top: 24px;
+    text-align: center;
+}
+.Juego .shortcuts {
+    margin: auto;
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}

@@ -1,0 +1,11 @@
+.palabra h1{
+    color: #fff
+}
+
+.palabra h1.spoted{
+    color: #15CB32
+}
+
+.palabra h1.failed{
+    color: #E70202
+}
