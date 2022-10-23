@@ -95,6 +95,7 @@ export const useGlobalState = (dependencies) => {
         }
         const word = newWord()
         setGlobalState({...globalState, activeTeam: nextTeam, activePlayer: nextPlayer, lastPlayer: globalState.activePlayer, word: word});
+        localStorage.setItem('claveMorseScout', JSON.stringify({...globalState, activeTeam: nextTeam, activePlayer: nextPlayer, lastPlayer: globalState.activePlayer, word: word}));
     }
 
     const addTeam1Player = (name) => {
