@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/clave-morse-scout/static/css/main.425d10e1.css",
-    "main.js": "/clave-morse-scout/static/js/main.bb0a7ec5.js",
+    "main.js": "/clave-morse-scout/static/js/main.e2afb7d3.js",
     "static/js/787.65411ebe.chunk.js": "/clave-morse-scout/static/js/787.65411ebe.chunk.js",
     "static/media/Lorano-Regular.otf": "/clave-morse-scout/static/media/Lorano-Regular.5b04884335b20a899437.otf",
     "static/media/jota-joti.png": "/clave-morse-scout/static/media/jota-joti.35dd18519127a4a30224.png",
     "static/media/background.png": "/clave-morse-scout/static/media/background.ed55c1af82ef4215f18d.png",
     "index.html": "/clave-morse-scout/index.html",
     "main.425d10e1.css.map": "/clave-morse-scout/static/css/main.425d10e1.css.map",
-    "main.bb0a7ec5.js.map": "/clave-morse-scout/static/js/main.bb0a7ec5.js.map",
+    "main.e2afb7d3.js.map": "/clave-morse-scout/static/js/main.e2afb7d3.js.map",
     "787.65411ebe.chunk.js.map": "/clave-morse-scout/static/js/787.65411ebe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.425d10e1.css",
-    "static/js/main.bb0a7ec5.js"
+    "static/js/main.e2afb7d3.js"
   ]
 }
