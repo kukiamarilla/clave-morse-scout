@@ -71,10 +71,6 @@ export const Palabra = () => {
         setLetterSelected(null);
         setSpotCounter(spotCounter + 1);
         document.removeEventListener("keydown", handleKeyDown);
-        if(spotCounter + 1 === letters.length) {
-            alert("Ganaste!");
-            winActivePlayer();
-        }
     }
     const fail = (index) => {
         if(letters[index].spoted || letters[index].failed) return;
@@ -95,7 +91,6 @@ export const Palabra = () => {
         setLetters(lett);
         setLetterSelected(null);
         document.removeEventListener("keydown", handleKeyDown);
-         
     }
 
     const handleKeyDown = (e) => {
@@ -114,6 +109,13 @@ export const Palabra = () => {
             document.removeEventListener("keydown", handleKeyDown);
         }
     }, [letterSelected]);
+
+    useEffect(() => {
+        if(spotCounter === 6) {
+            alert("Ganaste!");
+            winActivePlayer();
+        }
+    }, [spotCounter])
     return (
         <>
             <div className="palabra">

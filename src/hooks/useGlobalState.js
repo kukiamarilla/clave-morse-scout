@@ -15,6 +15,7 @@ export const useGlobalState = (dependencies) => {
         teamEditMode: false,
         activeTeam: 2,
         activePlayer: -1,
+        lastPlayer: -1,
         pressingShift: false,
     }
 
@@ -85,22 +86,15 @@ export const useGlobalState = (dependencies) => {
         }
         let nextTeam;
         let nextPlayer
-        if(globalState.activeTeam === 1){
-            nextTeam = 2;
-            nextPlayer = globalState.activePlayer % globalState.team2.length;
-            while(globalState.team2[nextPlayer].won){
-                nextPlayer = (nextPlayer + 1) % globalState.team2.length;
-            }
-        } else {
-            nextTeam = 1;
-            nextPlayer = (globalState.activePlayer + 1) % globalState.team1.length;
-            while(globalState.team1[nextPlayer].won){
-                nextPlayer = (nextPlayer + 1) % globalState.team1.length;
-            }
+        nextTeam = globalState.activeTeam === 1 ? 2 : 1;
+        nextPlayer = globalState.lastPlayer + 1;
+        nextPlayer = nextPlayer % globalState[`team${nextTeam}`].length;
+        while(globalState[`team${nextTeam}`][nextPlayer].won) {
+            nextPlayer++;
+            nextPlayer = nextPlayer % globalState[`team${nextTeam}`].length;
         }
-        const word = newWord();
-        setGlobalState({...globalState, activeTeam: nextTeam, activePlayer: nextPlayer, word});
-        localStorage.setItem('claveMorseScout', JSON.stringify({...globalState, activeTeam: nextTeam, activePlayer: nextPlayer, word}));
+        const word = newWord()
+        setGlobalState({...globalState, activeTeam: nextTeam, activePlayer: nextPlayer, lastPlayer: globalState.activePlayer, word: word});
     }
 
     const addTeam1Player = (name) => {
